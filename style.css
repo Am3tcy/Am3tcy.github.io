@@ -1,0 +1,39 @@
+.body {
+  background-color: #fcfcfc;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15.5px;
+}
+
+.special-text {
+  font-family: serif;
+}
+
+.main {
+  background-color: FFFFFF;
+  padding: 0em 1em;
+}
+
+/*Navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ 
+li {
+    float: left;
+}
+ 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+li a:hover {
+    background-color: #111;
+}
