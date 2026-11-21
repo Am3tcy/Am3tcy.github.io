@@ -7,29 +7,27 @@ const themeSwitchMobile = document.getElementById('themeSwitchMobile');
 
 let menuOpen = false;
 
-function toggleMenu(){
+function toggleMenu() {
     menuOpen = !menuOpen;
-    if(menuOpen){
-        mobileMenu.classList.add('open');
-        overlay.classList.add('show');
-        menuToggle.textContent = '▼';
-    }else{
-        mobileMenu.classList.remove('open');
-        overlay.classList.remove('show');
-        menuToggle.textContent = '▶';
-    }
+    mobileMenu.classList.toggle('open', menuOpen);
+    overlay.classList.toggle('show', menuOpen);
+    menuToggle.textContent = menuOpen ? '×' : '☰';
+    menuToggle.setAttribute('aria-expanded', String(menuOpen));
+    menuToggle.setAttribute('aria-label', menuOpen ? 'Close menu' : 'Open menu');
 }
+
 menuToggle.addEventListener('click', toggleMenu);
 overlay.addEventListener('click', toggleMenu);
 
-function switchTheme(){
-    if(body.classList.contains('light')){
+function switchTheme() {
+    if (body.classList.contains('light')) {
         body.classList.remove('light');
         body.classList.add('dark');
-    }else{
+    } else {
         body.classList.remove('dark');
         body.classList.add('light');
     }
 }
+
 themeSwitch.addEventListener('click', switchTheme);
 themeSwitchMobile.addEventListener('click', switchTheme);
