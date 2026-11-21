@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Am3tcy's Site</title>
+<link rel="stylesheet" href="./nav.css">
 </head>
-<body>
-    <h1>Welcome to Am3tcy.github.io!</h1>
-    <p>View and edit.</p>
+<body class="light">
+    <nav class="site-nav">
+        <button class="nav-toggle" id="menuToggle">▶</button>
+        <a href="./index.html" class="nav-brand">Am3tcy's Site</a>
+        <div class="nav-menu-pc">
+            <a href="./index.html">Home</a>
+            <a href="./ar/index.html">العربية</a>
+            <a href="./bn/index.html">বাংলা</a>
+            <a href="./es/index.html">Español</a>
+            <a href="./zh/index.html">中文</a>
+            <button class="theme-btn" id="themeSwitch">SWITCH THEME</button>
+        </div>
+    </nav>
+    <div class="mobile-sidebar" id="mobileMenu">
+        <a href="./index.html">Home</a>
+        <a href="./ar/index.html">العربية</a>
+        <a href="./bn/index.html">বাংলা</a>
+        <a href="./es/index.html">Español</a>
+        <a href="./zh/index.html">中文</a>
+        <button class="theme-btn" id="themeSwitchMobile">SWITCH THEME</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <h1>Home</h1>
+        <p>Welcome to Am3tcy's personal site (Am3tcy.github.io)! Even though this website is pretty basic, I'm trying to make it better.</p>
+    </main>
+
+    <end>©Am3tcy, 2026. | comtact to A531492651@outlook.com</end>
+
+<script src="./nav.js"></script>
 </body>
 </html>
