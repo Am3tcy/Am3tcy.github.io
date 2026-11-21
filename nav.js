@@ -31,3 +31,31 @@ function switchTheme() {
 
 themeSwitch.addEventListener('click', switchTheme);
 themeSwitchMobile.addEventListener('click', switchTheme);
+
+const body = document.body;
+
+// Restore the saved theme; use light mode if none has been saved.
+const savedTheme = localStorage.getItem('theme') || 'light';
+body.classList.remove('light', 'dark');
+body.classList.add(savedTheme);
+
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+const themeSwitch = document.getElementById('themeSwitch');
+const themeSwitchMobile = document.getElementById('themeSwitchMobile');
+
+let menuOpen = false;
+
+// ...keep your existing menu code...
+
+function switchTheme() {
+    const newTheme = body.classList.contains('light') ? 'dark' : 'light';
+
+    body.classList.remove('light', 'dark');
+    body.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+themeSwitch.addEventListener('click', switchTheme);
+themeSwitchMobile.addEventListener('click', switchTheme);
